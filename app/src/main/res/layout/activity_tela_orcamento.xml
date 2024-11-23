@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaOrcamento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Título da tela -->
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Detalhes do Orçamento"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- RecyclerView para exibir os orçamentos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOrcamentos"
+            android:layout_width="396dp"
+            android:layout_height="461dp"
+            android:layout_marginTop="16dp"
+            android:background="#F0F0F0"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+            app:layout_constraintVertical_bias="0.12" />
+
+        <!-- Botão Confirmar -->
+        <ImageButton
+            android:id="@+id/btnConfirmar"
+            android:layout_width="97dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Confirmar Orçamento"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFinalPreco"
+            app:srcCompat="@drawable/confirmar" />
+
+        <!-- Botão Voltar -->
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="97dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="536dp"
+            android:contentDescription="Voltar"
+            android:src="@android:drawable/ic_menu_revert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+        <!-- Exibição do preço final -->
+        <TextView
+            android:id="@+id/textViewFinalPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Preço Final: R$ 0,00"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewOrcamentos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

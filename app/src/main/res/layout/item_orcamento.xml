@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Texto do orçamento -->
+        <TextView
+            android:id="@+id/textViewOrcamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Orçamento"
+            android:textSize="16sp" />
+
+        <!-- Botão de excluir -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Excluir Orçamento"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

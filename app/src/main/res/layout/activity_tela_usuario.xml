@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".TelaUsuario">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Título principal -->
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados do Usuário"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Nome -->
+        <TextView
+            android:id="@+id/textViewNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Digite o nome"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewNome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Sobrenome -->
+        <TextView
+            android:id="@+id/textViewSobrenome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sobrenome"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/editTextNome"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextSobrenome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Digite o sobrenome"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewSobrenome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Telefone -->
+        <TextView
+            android:id="@+id/textViewTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/editTextSobrenome"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextTelefone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Digite o telefone"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewTelefone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Endereço -->
+        <TextView
+            android:id="@+id/textViewEndereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/editTextTelefone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextEndereco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Digite o endereço"
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewEndereco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/editTextEndereco"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Digite o email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botões -->
+
+        <ImageButton
+            android:id="@+id/imageButtonConfirmar"
+            android:layout_width="97dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="24dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Confirmar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/confirmar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.943"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+        <ImageButton
+            android:id="@+id/imageButtonCompartilharDados"
+            android:layout_width="97dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Enviar Dados"
+            android:scaleType="fitCenter"
+            android:src="@drawable/whatszap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageButtonConfirmar" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="97dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Voltar"
+            android:src="@android:drawable/ic_menu_revert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaVidro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Medições do Vidro"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo de Comprimento -->
+        <TextView
+            android:id="@+id/textViewComprimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Comprimento (Metro)"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/editComprimentoVidro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite aqui --> Ex: 1.50"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewComprimento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo de Largura -->
+        <TextView
+            android:id="@+id/textViewLargura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Largura (Metro)"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editComprimentoVidro" />
+
+        <EditText
+            android:id="@+id/editLarguraVidro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite aqui --> Ex: 1.45"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLargura"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Seleção de Produto -->
+        <TextView
+            android:id="@+id/textViewTituloProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Selecione o Produto"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLarguraVidro" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupProdutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloProduto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Box" />
+
+            <RadioButton
+                android:id="@+id/radioJanela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Janela" />
+
+            <RadioButton
+                android:id="@+id/radioPorta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Porta" />
+
+            <RadioButton
+                android:id="@+id/radioMesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mesa" />
+        </RadioGroup>
+
+        <!-- Seleção de Tipo de Vidro -->
+        <TextView
+            android:id="@+id/textViewTituloVidro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Selecione o Tipo de Vidro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupProdutos" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupCaracteristicas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloVidro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioFume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fumê" />
+
+            <RadioButton
+                android:id="@+id/radioLaminado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laminado" />
+
+            <RadioButton
+                android:id="@+id/radioJateado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jateado" />
+
+            <RadioButton
+                android:id="@+id/radioTemperado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperado" />
+        </RadioGroup>
+
+        <!-- Resultado -->
+        <TextView
+            android:id="@+id/textViewResultadoVidro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultado:"
+            android:textSize="16sp"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/black"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupCaracteristicas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Botão Calcular -->
+
+        <Button
+            android:id="@+id/buttonCalcularVidro"
+            android:layout_width="178dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="24dp"
+            android:text="Selecionar e Calcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResultadoVidro" />
+
+        <ImageButton
+            android:id="@+id/bt_Proximo"
+            android:layout_width="121dp"
+            android:layout_height="81dp"
+            android:layout_marginTop="108dp"
+            android:contentDescription="Prosseguir"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResultadoVidro"
+            app:srcCompat="@drawable/confirmar" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="121dp"
+            android:layout_height="81dp"
+            android:layout_marginTop="108dp"
+            android:contentDescription="Voltar"
+            android:src="@android:drawable/ic_menu_revert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResultadoVidro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
